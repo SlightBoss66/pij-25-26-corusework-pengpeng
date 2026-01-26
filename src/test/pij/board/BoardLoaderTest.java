@@ -14,7 +14,7 @@ public class BoardLoaderTest {
                 + "7\n"     // M
                 + "28\n"    // N  (7*28=196 >= 192)
                 + "a1\n"    // start square
-                + rows(28, 7, "."); // 28 lines, each 7 tokens
+                + rows(28, 7, "."); // 28 lines, each line 7 tokens
         Board b = new BoardLoader().load(new StringReader(text));
         assertEquals(7, b.cols());
         assertEquals(28, b.rows());
