@@ -25,9 +25,6 @@ public final class MoveValidator {
         this.injectedDict = dict;
     }
 
-    // -------------------------
-    // Public API (two overloads)
-    // -------------------------
 
     public ValidatedMove validate(Board board, Rack rack, Move move, boolean firstMove) throws IllegalMoveException {
         if (injectedDict == null) {
@@ -75,10 +72,6 @@ public final class MoveValidator {
         return new ValidatedMove(mainWord, planned.placements);
     }
 
-    // -------------------------
-    // Internal planning struct
-    // -------------------------
-
     private static final class Planned {
         final List<Placement> placements; // new tiles to place
         final List<Square> pathSquares;   // squares covered by raw input (length = raw.length)
@@ -89,9 +82,6 @@ public final class MoveValidator {
         }
     }
 
-    // -------------------------------------------------------
-    // Step10C: plan path square-by-square (NO skipping occupied)
-    // -------------------------------------------------------
 
     private Planned planWithExistingTiles(Board board, Rack rackCopy, String word, Square start, Direction dir)
             throws IllegalMoveException {
@@ -134,9 +124,6 @@ public final class MoveValidator {
         return new Planned(placements, path);
     }
 
-    // -------------------------
-    // One-word rule (no cross words)
-    // -------------------------
 
     private boolean createsPerpendicularWord(Board board, Planned planned, Direction mainDir) {
         Direction perp = (mainDir == Direction.RIGHT) ? Direction.DOWN : Direction.RIGHT;
@@ -172,9 +159,6 @@ public final class MoveValidator {
         return len;
     }
 
-    // -------------------------
-    // Build main word (after-move view)
-    // -------------------------
 
     private String buildMainWord(Board board, Planned planned, Direction dir) {
         int dr = (dir == Direction.DOWN) ? 1 : 0;
@@ -223,10 +207,6 @@ public final class MoveValidator {
         throw new IllegalStateException("No tile at " + row + "," + col);
     }
 
-    // -------------------------
-    // Tile/character helpers
-    // -------------------------
-
     private char normalizeInputChar(char ch) {
         if (Character.isUpperCase(ch)) return ch;
         if (Character.isLowerCase(ch)) return Character.toUpperCase(ch);
@@ -253,10 +233,6 @@ public final class MoveValidator {
             throw new IllegalMoveException("Invalid character in word");
         }
     }
-
-    // -------------------------
-    // Keep your existing copyRack (API-aligned)
-    // -------------------------
 
     private Rack copyRack(Rack original) {
         Rack r = new Rack();
