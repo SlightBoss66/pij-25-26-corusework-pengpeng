@@ -14,7 +14,6 @@ import java.util.regex.Pattern;
  * Throws InvalidBoardFileException if the file violates any constraints.
  */
 
-
 public final class BoardLoader {
 
     private static final Pattern LETTER = Pattern.compile("^\\[(-?\\d{1,2})\\]$");
