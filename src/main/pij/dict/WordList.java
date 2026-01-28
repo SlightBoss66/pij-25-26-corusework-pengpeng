@@ -55,4 +55,8 @@ public final class WordList {
     public int size() {
         return words.size();
     }
+
+    public Iterable<String> allWords() {
+        return java.util.Collections.unmodifiableSet(words);
+    }
 }

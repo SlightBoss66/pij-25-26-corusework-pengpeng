@@ -800,7 +800,7 @@ Your code shall run on all Java platforms. In particular, two issues to look our
 
 - Your implementation shall be in **Java 25**. Implementations that do not compile with Java 25 but do compile with Java 21 will also be accepted.
 
-- The class from which the program is run shall be called `Main.java` and be in the package `pij.main`.
+- The class from which the program is run shall be called `Main.java` and be in the package `pij.play`.
 
 - Your program design shall employ object-oriented principles with suitable definitions of classes/interfaces and using packages, encapsulation, polymorphism, and inheritance as appropriate for this case.
 
@@ -843,11 +843,11 @@ The other sections (from "Description of the coursework: ScraeBBKle" onward) sha
 The files of the final version of your project must be submitted via Moodle. We require at least the following in your submission:
 
 - `README.md` with your name and your academic declaration added in the first two sections
-- `src/main/pij/main/Main.java` as the class in package `pij.main` from which your program is started
+- `src/main/pij/main/Main.java` as the class in package `pij.play` from which your program is started
 - `resources/defaultBoard.txt` as the file from which the default board is loaded (should not be changed for the submission)
 - `resources/wordlist.txt` as the word list used by the game (should not be changed for the submission)
 
-and any other files or directories that are needed for the program started from class `Main` in package `pij.main` to run, as well as the JUnit tests.
+and any other files or directories that are needed for the program started from class `Main` in package `pij.play` to run, as well as the JUnit tests.
 
 The above files will already be present in your initial repository. You will need to modify `README.md` and `src/main/pij/main/Main.java` and add further files as needed.
 
