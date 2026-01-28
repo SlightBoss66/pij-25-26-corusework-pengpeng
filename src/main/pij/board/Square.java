@@ -2,6 +2,9 @@ package pij.board;
 
 import java.util.Objects;
 
+/**
+ * Represents a board coordinate using zero-based row and column indices.
+ */
 public final class Square {
     private final int row; // 0-based
     private final int col; // 0-based

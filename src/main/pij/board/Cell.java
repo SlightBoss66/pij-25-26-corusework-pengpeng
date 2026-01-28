@@ -1,5 +1,9 @@
 package pij.board;
 
+/**
+ * Represents a single board cell.
+ * Premium factors apply only when a tile is placed on this cell.
+ */
 public final class Cell {
     private final CellType type;
     private final int factor; // for premium cells; for normal we keep 1

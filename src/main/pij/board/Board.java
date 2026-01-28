@@ -1,5 +1,10 @@
 package pij.board;
 
+/**
+ * Immutable representation of the game board.
+ * Stores board dimensions, start square, and cell layout.
+ */
+
 public final class Board {
     private final int mCols;
     private final int nRows;

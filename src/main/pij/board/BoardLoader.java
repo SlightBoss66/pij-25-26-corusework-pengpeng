@@ -8,6 +8,13 @@ import java.nio.file.Path;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * Loads a game board from a text file as specified in the coursework.
+ * Validates board dimensions, start square, and premium cell tokens.
+ * Throws InvalidBoardFileException if the file violates any constraints.
+ */
+
+
 public final class BoardLoader {
 
     private static final Pattern LETTER = Pattern.compile("^\\[(-?\\d{1,2})\\]$");
